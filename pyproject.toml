@@ -1,0 +1,29 @@
+[project]
+name = "pokemon-tcg-ocr"
+version = "0.1.0"
+description = "Detect and catalog Pokémon TCG cards from photos"
+requires-python = ">=3.11"
+dependencies = [
+    "opencv-python-headless>=4.9",
+    "easyocr>=1.7",
+    "Pillow>=10.0",
+    "numpy>=1.26",
+    "click>=8.1",
+    "requests>=2.31",
+]
+
+[project.scripts]
+pokemon-tcg = "src.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
