@@ -5,5 +5,3 @@ __pycache__/
 *.egg-info/
 mprofile_*.dat
 pokemon-tcg.log
-
-*.dat
